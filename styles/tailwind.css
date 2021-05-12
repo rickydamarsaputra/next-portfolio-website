@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	body {
+		@apply bg-gray-darkest text-white-darkest;
+		font-family: "Inter", sans-serif;
+	}
+	.article_item:hover h1,
+	.bookmark_item:hover h1 {
+		@apply underline;
+	}
+
+	.footer_link {
+		@apply text-blue-neo;
+	}
+	.footer_link:hover {
+		@apply underline;
+	}
+}

@@ -70,16 +70,17 @@ export async function getStaticProps({ params }) {
 }
 
 export default function post({ post }) {
-	const { title, slug, featuredImage, body } = post.fields;
+	const { title, slug, featuredImage, body, excerpt } = post.fields;
 	return (
 		<div className="mt-10">
 			<Head>
 				<title>@rickydamar · {slug}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta name="description" content={excerpt}></meta>
 			</Head>
 
 			<div className="w-4/5 md:w-3/5 mx-auto opacity-80">
-				<Image src={"https:" + featuredImage.fields.file.url} width={featuredImage.fields.file.details.image.width} height={featuredImage.fields.file.details.image.height} />
+				<Image src={"https:" + featuredImage.fields.file.url} alt={featuredImage.fields.title} width={featuredImage.fields.file.details.image.width} height={featuredImage.fields.file.details.image.height} />
 			</div>
 			<div className="w-4/5 md:w-1/2 mx-auto mt-5">
 				<h2>{formatDate(post.sys.createdAt)} / ARTICLE</h2>

@@ -6,7 +6,7 @@ export default function footer() {
 					<span className="font-bold text-white-darkest">@rickydamar</span> says “black lives matter”
 				</h1>
 				<div className="flex flex-col md:flex-row  md:items-center md:space-x-5 mt-5">
-					<a href="http://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank">
+					<a href="http://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" aria-label="creativecommons licenses">
 						<img className="mb-2 md:mb-0" src="https://resir014.xyz/_next/static/images/cc-by-nc-sa-35157979fe2560971c103dd439f23409.svg" alt="" width="90px" />
 					</a>
 					<p className="text-sm">

@@ -1,7 +1,29 @@
 import Link from "next/link";
 import Head from "next/head";
 
-export default function home() {
+import SinglePost from "../components/single.post";
+
+import { createClient } from "contentful";
+
+export async function getStaticProps() {
+	const client = createClient({
+		space: process.env.CONTENTFULL_SPACE_ID,
+		accessToken: process.env.CONTENTFULL_ACCESS_TOKEN,
+	});
+
+	const res = await client.getEntries({
+		content_type: "post",
+	});
+
+	return {
+		props: {
+			posts: res.items,
+		},
+		revalidate: 1,
+	};
+}
+
+export default function home({ posts }) {
 	const dummy = [1, 2, 3, 4, 5];
 
 	return (
@@ -26,19 +48,11 @@ export default function home() {
 				<h1 className="text-3xl font-bold">Featured articles</h1>
 				<h2 className="text-xl mt-2">Writings about web development, technology, and everything in between.</h2>
 				<div className="mt-10">
-					{dummy.map((item) => (
-						<Link href="#" key={item}>
-							<a>
-								<div className="article_item mb-10">
-									<h2>18 JANUARY 2021 / ARTICLE {item}</h2>
-									<h1 className="text-2xl font-medium mt-1">Please, tell us how you solved the problem.</h1>
-									<p className="mt-2">Don't just let us know that you 'solved' a problem. Tell us how.</p>
-								</div>
-							</a>
-						</Link>
+					{posts.map((post) => (
+						<SinglePost key={post.sys.id} post={post} />
 					))}
 				</div>
-				<Link href="#">
+				<Link href="/posts">
 					<a className="text-xl text-blue-neo hover:underline">View all posts →</a>
 				</Link>
 			</section>

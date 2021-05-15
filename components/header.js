@@ -5,7 +5,7 @@ export default function header() {
 		<header className="border-b border-white-darkest border-opacity-10 py-4">
 			<div className="w-4/5 mx-auto flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
 				<div>
-					<Link href="#">
+					<Link href="/">
 						<a className="font-semibold">@rickydamar</a>
 					</Link>
 				</div>
@@ -16,8 +16,8 @@ export default function header() {
 						</Link>
 					</li>
 					<li>
-						<Link href="#">
-							<a className="font-medium hover:underline">post</a>
+						<Link href="/posts">
+							<a className="font-medium hover:underline">posts</a>
 						</Link>
 					</li>
 					<li>

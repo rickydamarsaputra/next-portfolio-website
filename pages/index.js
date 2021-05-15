@@ -31,6 +31,7 @@ export default function home({ posts }) {
 			<Head>
 				<title>@rickydamar</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta name="description" content="this is my personal website, i created by nextjs and headless cms contentful" />
 			</Head>
 
 			{/* hero section */}

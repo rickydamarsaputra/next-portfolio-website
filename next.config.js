@@ -3,6 +3,6 @@ module.exports = {
 		domains: ["images.ctfassets.net"],
 	},
 	future: {
-		webpack5: false,
+		webpack5: true,
 	},
 };

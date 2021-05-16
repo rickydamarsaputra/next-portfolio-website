@@ -16,7 +16,6 @@
 	.contact_social_media li::before {
 		content: "-";
 		margin-right: 1rem;
-		content: "–";
 		display: inline-block;
 		color: rgb(161, 161, 165);
 	}

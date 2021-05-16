@@ -74,7 +74,7 @@ export default function about() {
 				<h2 className="text-xl font-medium mt-4">Design tools</h2>
 				<p className="text-sm mt-2">Adobe XD, Figma</p>
 				<h2 className="text-xl font-medium mt-4">Video editing</h2>
-				<p className="text-sm mt-2">Firmora, Camtasia</p>
+				<p className="text-sm mt-2">Filmora, Camtasia</p>
 			</section>
 			{/* about other skill */}
 

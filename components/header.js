@@ -11,7 +11,7 @@ export default function header() {
 				</div>
 				<ul className="flex space-x-5">
 					<li>
-						<Link href="#">
+						<Link href="/about">
 							<a className="font-medium hover:underline">about</a>
 						</Link>
 					</li>
@@ -26,7 +26,7 @@ export default function header() {
 						</Link>
 					</li>
 					<li>
-						<Link href="#">
+						<Link href="/contact">
 							<a className="font-medium hover:underline">contact</a>
 						</Link>
 					</li>

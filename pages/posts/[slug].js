@@ -4,14 +4,9 @@ import Image from "next/image";
 import moment from "moment";
 import "moment/locale/id";
 
-import { createClient } from "contentful";
+import client from "../../contentful/client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
-
-const client = createClient({
-	space: process.env.CONTENTFULL_SPACE_ID,
-	accessToken: process.env.CONTENTFULL_ACCESS_TOKEN,
-});
 
 const RICHTEXT_OPTIONS = {
 	renderNode: {
@@ -52,7 +47,7 @@ export async function getStaticPaths() {
 
 	return {
 		paths,
-		fallback: false,
+		fallback: true,
 	};
 }
 

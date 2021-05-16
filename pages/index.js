@@ -3,14 +3,9 @@ import Head from "next/head";
 
 import SinglePost from "../components/single.post";
 
-import { createClient } from "contentful";
+import client from "../contentful/client";
 
 export async function getStaticProps() {
-	const client = createClient({
-		space: process.env.CONTENTFULL_SPACE_ID,
-		accessToken: process.env.CONTENTFULL_ACCESS_TOKEN,
-	});
-
 	const res = await client.getEntries({
 		content_type: "post",
 	});

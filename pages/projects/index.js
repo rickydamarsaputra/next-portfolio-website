@@ -33,7 +33,7 @@ export default function projects({ projects }) {
 
 			{/* project featured */}
 			<section>
-				<div className="mt-10 rounded-md overflow-hidden">
+				<div className="featured_project mt-10 rounded-md overflow-hidden">
 					<Image src={"https:" + featuredProject.fields.featuredImage.fields.file.url} width={featuredProject.fields.featuredImage.fields.file.details.image.width} height={featuredProject.fields.featuredImage.fields.file.details.image.height} />
 					<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 						<span className="text-sm">FEATURED PROJECT</span>

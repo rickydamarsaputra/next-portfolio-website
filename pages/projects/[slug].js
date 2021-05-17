@@ -90,7 +90,7 @@ export default function project({ project }) {
 				<meta name="description" content={shortDescription}></meta>
 			</Head>
 
-			<div className="w-4/5 md:w-3/5 mx-auto rounded-md overflow-hidden">
+			<div className="project_detail w-4/5 md:w-3/5 mx-auto rounded-md overflow-hidden">
 				<Image src={"https:" + project.fields.featuredImage.fields.file.url} width={project.fields.featuredImage.fields.file.details.image.width} height={project.fields.featuredImage.fields.file.details.image.height} />
 				<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 					<span className="text-sm">FEATURED PROJECT</span>

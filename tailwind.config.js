@@ -19,6 +19,9 @@ module.exports = {
 				light: "#0070f3",
 			},
 		},
+		fontFamily: {
+			"jetbrain-mono": ["JetBrains Mono", "monospace"],
+		},
 	},
 	variants: {
 		extend: {},

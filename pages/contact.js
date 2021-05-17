@@ -13,7 +13,7 @@ export default function contact() {
 			{/* contact social media */}
 			<section>
 				<h1 className="text-3xl font-semibold">Social media, etc.</h1>
-				<ul className="contact_social_media mt-4">
+				<ul className="list_items mt-4">
 					<li>
 						<p>
 							<a href="https://github.com/rickydamarsaputra" rel="noreferrer" target="_blank" className="text-blue-neo font-semibold hover:underline">

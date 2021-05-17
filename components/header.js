@@ -21,7 +21,7 @@ export default function header() {
 						</Link>
 					</li>
 					<li>
-						<Link href="#">
+						<Link href="/projects">
 							<a className="font-medium hover:underline">projects</a>
 						</Link>
 					</li>

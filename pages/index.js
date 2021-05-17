@@ -99,7 +99,7 @@ export default function home({ posts }) {
 						</ul>
 						<div className="mt-5">
 							<Link href="#">
-								<a className="text-xl text-blue-neo hover:underline">View project →</a>
+								<a className="text-xl text-blue-neo hover:underline">Visit project →</a>
 							</Link>
 						</div>
 					</div>

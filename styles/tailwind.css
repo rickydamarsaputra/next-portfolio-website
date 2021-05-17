@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,14 +14,18 @@
 	.bookmark_item:hover h1 {
 		@apply underline;
 	}
-	.contact_social_media li::before {
+	.list_items li::before {
 		content: "-";
 		margin-right: 1rem;
 		display: inline-block;
 		color: rgb(161, 161, 165);
 	}
-	.contact_social_media li p {
+	.list_items li p {
 		display: inline-block;
+	}
+	#__next > div > section:nth-child(2) > div > div:nth-child(1),
+	#__next > div > div > div:nth-child(1) {
+		display: block !important;
 	}
 	.footer_link {
 		@apply text-blue-neo;

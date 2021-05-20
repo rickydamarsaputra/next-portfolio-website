@@ -66,7 +66,7 @@ export default function home({ posts, project, repos }) {
 				<h1 className="text-3xl font-bold">Repositories list</h1>
 				<div className="mt-10">
 					{repos.map((repo) => (
-						<a href={repo.html_url} target="_blank" key={repo.id}>
+						<a href={repo.html_url} target="_blank" rel="noreferrer" key={repo.id}>
 							<div className="bookmark_item mb-5">
 								<h1 className="text-xl font-semibold overflow-x-auto whitespace-nowrap text-blue-neo bg-gray-lightent p-2 rounded-tr-md rounded-tl-md">{repo.name} →</h1>
 								<h2 className="text-sm bg-gray-dark overflow-x-auto whitespace-nowrap p-2 rounded-br-md rounded-bl-md">{repo.html_url}</h2>

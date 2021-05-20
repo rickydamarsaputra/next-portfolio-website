@@ -1,6 +1,41 @@
 import Head from "next/head";
 
+import { useState } from "react";
+
+const Question = ({ answer, setAnswer, setShowEmail }) => {
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		if (Number(answer) === 666) setShowEmail(true);
+		setAnswer("");
+	};
+
+	return (
+		<>
+			<h2 className="mb-2">
+				How result from <span className="font-medium text-blue-neo">111 x 6</span> 🤔 ?
+			</h2>
+			<form onSubmit={handleSubmit}>
+				<input type="text" onChange={(text) => setAnswer(text.target.value)} value={answer} className="py-2 px-4 focus:outline-none bg-gray-dark placeholder-blue-neo text-blue-neo" placeholder="enter the answer here..." />
+			</form>
+		</>
+	);
+};
+
+const MyEmail = () => {
+	return (
+		<>
+			<p className="mb-4">please don't spam my email 🤣</p>
+			<a href="mailto:retrocode.rc@gmail.com" className="text-blue-neo hover:underline bg-gray-dark py-2 px-4 rounded-md">
+				retrocode.rc@gmail.com
+			</a>
+		</>
+	);
+};
+
 export default function contact() {
+	const [showEmail, setShowEmail] = useState(false);
+	const [answer, setAnswer] = useState("");
+
 	return (
 		<div className="w-4/5 md:w-1/2 mx-auto mt-10">
 			<Head>
@@ -37,10 +72,8 @@ export default function contact() {
 			{/* contact email */}
 			<section className="mt-5">
 				<h1 className="text-3xl font-semibold mb-4">Email</h1>
-				<p className="mb-4">please don't spam my email 🤣</p>
-				<a href="mailto:retrocode.rc@gmail.com" className="text-blue-neo hover:underline bg-gray-dark py-2 px-4 rounded-md">
-					retrocode.rc@gmail.com
-				</a>
+				{!showEmail ? <Question answer={answer} setAnswer={setAnswer} setShowEmail={setShowEmail} /> : ""}
+				{showEmail && <MyEmail />}
 			</section>
 			{/* contact email */}
 		</div>

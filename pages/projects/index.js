@@ -34,7 +34,12 @@ export default function projects({ projects }) {
 			{/* project featured */}
 			<section>
 				<div className="featured_project mt-10 rounded-md overflow-hidden">
-					<Image src={"https:" + featuredProject.fields.featuredImage.fields.file.url} width={featuredProject.fields.featuredImage.fields.file.details.image.width} height={featuredProject.fields.featuredImage.fields.file.details.image.height} />
+					<Image
+						src={"https:" + featuredProject.fields.featuredImage.fields.file.url}
+						alt={featuredProject.fields.featuredImage.fields.title}
+						width={featuredProject.fields.featuredImage.fields.file.details.image.width}
+						height={featuredProject.fields.featuredImage.fields.file.details.image.height}
+					/>
 					<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 						<span className="text-sm">FEATURED PROJECT</span>
 						<h1 className="text-2xl font-semibold text-blue-neo">{featuredProject.fields.title}</h1>

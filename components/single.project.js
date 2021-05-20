@@ -8,7 +8,7 @@ export default function single_project({ project }) {
 			<p className="mt-4">{project.fields.shortDescription}</p>
 			<div className="mt-5">
 				<Link href={"/projects/" + project.fields.slug}>
-					<a className="text-blue-neo hover:underline">Go to project →</a>
+					<a className="text-blue-neo hover:underline">Visit project →</a>
 				</Link>
 			</div>
 		</div>

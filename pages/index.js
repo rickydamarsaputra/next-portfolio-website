@@ -75,7 +75,7 @@ export default function home({ posts, project, repos }) {
 					))}
 				</div>
 				<div className="mt-10">
-					<a href={process.env.GIT_REPOS} target="_blank" className="text-xl text-blue-neo hover:underline">
+					<a href={process.env.GIT_REPOS} target="_blank" rel="noreferrer" className="text-xl text-blue-neo hover:underline">
 						View all repo →
 					</a>
 				</div>

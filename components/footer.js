@@ -10,21 +10,16 @@ export default function footer() {
 						<img className="mb-2 md:mb-0" src="https://resir014.xyz/_next/static/images/cc-by-nc-sa-35157979fe2560971c103dd439f23409.svg" alt="" width="90px" />
 					</a>
 					<p className="text-sm">
-						Except where otherwise noted, contents are licensed under{" "}
-						<a href="http://creativecommons.org/licenses/by-nc-sa/4.0" rel="noreferrer" target="_blank" className="footer_link">
-							CC-BY-NC-SA 4.0
-						</a>
-						. <br />
-						Powered by{" "}
+						Didukung oleh{" "}
 						<a href="https://nextjs.org" rel="noreferrer" target="_blank" className="footer_link">
 							Next.js
 						</a>{" "}
-						and{" "}
+						dan{" "}
 						<a href="https://reactjs.org" rel="noreferrer" target="_blank" className="footer_link">
 							React
 						</a>
-						. Code licensed under the{" "}
-						<a href="https://reactjs.org" rel="noreferrer" target="_blank" className="footer_link">
+						. Kode berlisensi di bawah Lisensi{" "}
+						<a href="https://github.com/rickydamarsaputra/next-portfolio-website" rel="noreferrer" target="_blank" className="footer_link">
 							MIT License
 						</a>
 						.{" "}

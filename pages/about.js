@@ -15,24 +15,29 @@ export default function about() {
 			<section>
 				<h2 className="text-xl font-light">Hey, call me Ricky! I'm a web developer.</h2>
 				<p className="mt-5">
-					I'm a self-taught web developer based in Surabaya, Indonesia. I am a junior web developer, responsible with their work during working hours. Finish various technical and higher studies at large universities. I have several years of experience and achievements in the labor field.
+					Saya seorang web developer otodidak yang berbasis di Surabaya, Indonesia. Saya seorang <span className="font-bold">junior web developer</span>, bertanggung jawab dengan pekerjaan mereka selama jam kerja. Saya sedang menembuh kuliah disalah satu universitas di surabaya, yaitu universitas{" "}
+					<a href="https://www.dinamika.ac.id" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
+						Dinamika
+					</a>{" "}
+					. Saya memiliki pengalaman dan prestasi beberapa tahun di bidang yang saya geluti.
 				</p>
 				<p className="mt-4">
-					I like web programming, especially on the frontend, I like to find out and learn new technology about the existing frontend such as React and Nextjs, I usually learn this through video tutorials on YouTube, I really like that, and I have several YouTube channel, I recommend the{" "}
+					Saya suka pemrograman web, terutama di frontend, saya suka mencari tahu dan mempelajari teknologi baru tentang frontend yang ada seperti React dan Nextjs, saya biasanya mempelajarinya melalui video tutorial di YouTube, saya sangat suka itu, dan saya memiliki beberapa rekomendasi channel
+					YouTube , Saya merekomendasikan <br />
 					<a href="https://www.youtube.com/channel/UCkXmLjEr95LVtGuIm3l2dPg" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 						web programming unpas
 					</a>
 					,{" "}
 					<a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
-						media traversy
+						traversy media
 					</a>
 					, and{" "}
 					<a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 						the net ninja 🐱‍👤.
 					</a>
 				</p>
-				<p className="mt-4">Outside of programming, I also reading manga 😁 and watch video programming tuts in youtube.</p>
-				<p className="mt-4">When I no longer do either of the things mentioned above, then something really bad must have happened to me.</p>
+				<p className="mt-4">Di luar pemrograman, saya juga membaca manga dan nonton anime 😁 kemudian menonton video pemrograman di youtube.</p>
+				<p className="mt-4">Ketika saya tidak lagi melakukan salah satu dari hal-hal yang disebutkan di atas, maka sesuatu yang sangat buruk pasti telah terjadi pada saya 😭.</p>
 			</section>
 			{/* about profile */}
 

@@ -41,7 +41,7 @@ export default function home({ posts, project, repos }) {
 				<h1 className="text-3xl capitalize font-bold text-blue-neo">ricky damar saputra</h1>
 				<h2 className="text-xl mt-2">Web developer based in Surabaya, Indonesia.</h2>
 				<p className="mt-10">
-					<span className="font-bold text-white">Hey there, I'm Ricky!</span> I'm a self-taught web developer based in Surabaya, Indonesia. I aim to blur the line between high-performance engineering and good design.
+					<span className="font-bold text-white">Halo, saya Ricky!</span> Saya seorang pengembang web otodidak yang berbasis di Surabaya, Indonesia. Saya bertujuan untuk mengaburkan garis antara teknik berkinerja tinggi dan desain yang bagus.
 				</p>
 			</section>
 			{/* hero section */}
@@ -49,7 +49,7 @@ export default function home({ posts, project, repos }) {
 			{/* articles section */}
 			<section className="mt-20">
 				<h1 className="text-3xl font-bold">Featured articles</h1>
-				<h2 className="text-xl mt-2">Writings about web development, technology, and everything in between.</h2>
+				<h2 className="text-xl mt-2">Tulisan tentang pengembangan web, teknologi, dan segala sesuatu di antaranya.</h2>
 				<div className="mt-10">
 					{posts.map((post) => (
 						<SinglePost key={post.sys.id} post={post} />

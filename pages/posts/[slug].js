@@ -8,6 +8,9 @@ import client from "../../contentful/client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 
+import SyntaxHighlighter from "react-syntax-highlighter";
+import syntaxStyle from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark";
+
 const RICHTEXT_OPTIONS = {
 	renderNode: {
 		[BLOCKS.PARAGRAPH]: (node, children) => {
@@ -23,11 +26,7 @@ const RICHTEXT_OPTIONS = {
 	},
 	renderMark: {
 		[MARKS.CODE]: (node, children) => {
-			return (
-				<pre className="bg-gray-dark py-2 px-4 rounded-md whitespace-nowrap overflow-x-auto">
-					<code>{node}</code>
-				</pre>
-			);
+			return <SyntaxHighlighter style={syntaxStyle}>{node}</SyntaxHighlighter>;
 		},
 	},
 };

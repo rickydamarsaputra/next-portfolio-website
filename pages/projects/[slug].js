@@ -80,8 +80,9 @@ export async function getStaticProps({ params }) {
 }
 
 export default function project({ project }) {
-	const { title, slug, shortDescription, description, type, linkToProject } = project.fields;
+	if (!project) return <h1>loading...</h1>;
 
+	const { title, slug, shortDescription, description, type, linkToProject } = project.fields;
 	return (
 		<div className="mt-10">
 			<Head>

@@ -65,6 +65,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default function post({ post }) {
+	if (!post) return <h1>loading...</h1>;
+
 	const { title, slug, featuredImage, body, excerpt } = post.fields;
 	return (
 		<div className="mt-10">

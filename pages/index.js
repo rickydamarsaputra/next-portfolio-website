@@ -1,18 +1,18 @@
-import Link from "next/link";
-import Head from "next/head";
-import Image from "next/image";
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
 
-import SinglePost from "../components/single.post";
+import SinglePost from '../components/single.post';
 
-import client from "../contentful/client";
+import client from '../contentful/client';
 
 export async function getStaticProps() {
 	const resPost = await client.getEntries({
-		content_type: "post",
+		content_type: 'post',
 	});
 
 	const resProject = await client.getEntries({
-		content_type: "project",
+		content_type: 'project',
 	});
 
 	const resRepo = await fetch(process.env.GIT_REPO_API).then((res) => res.json());
@@ -68,8 +68,8 @@ export default function home({ posts, project, repos }) {
 					{repos.map((repo) => (
 						<a href={repo.html_url} target="_blank" rel="noreferrer" key={repo.id}>
 							<div className="bookmark_item mb-5">
-								<h1 className="text-xl font-semibold overflow-x-auto whitespace-nowrap text-blue-neo bg-gray-lightent p-2 rounded-tr-md rounded-tl-md">{repo.name} →</h1>
-								<h2 className="text-sm bg-gray-dark overflow-x-auto whitespace-nowrap p-2 rounded-br-md rounded-bl-md">{repo.html_url}</h2>
+								<h1 className="text-xl font-semibold overflow-x-auto lg:overflow-x-hidden whitespace-nowrap text-blue-neo bg-gray-lightent p-2 rounded-tr-md rounded-tl-md">{repo.name} →</h1>
+								<h2 className="text-sm bg-gray-dark overflow-x-auto lg:overflow-x-hidden whitespace-nowrap p-2 rounded-br-md rounded-bl-md">{repo.html_url}</h2>
 							</div>
 						</a>
 					))}
@@ -86,20 +86,20 @@ export default function home({ posts, project, repos }) {
 			<section className="mt-20">
 				<h1 className="text-3xl font-bold">Featured project</h1>
 				<div className="featured_project mt-10 rounded-md overflow-hidden">
-					<Image src={"https:" + project.fields.featuredImage.fields.file.url} alt={project.fields.featuredImage.fields.title} width={project.fields.featuredImage.fields.file.details.image.width} height={project.fields.featuredImage.fields.file.details.image.height} />
+					<Image src={'https:' + project.fields.featuredImage.fields.file.url} alt={project.fields.featuredImage.fields.title} width={project.fields.featuredImage.fields.file.details.image.width} height={project.fields.featuredImage.fields.file.details.image.height} />
 					<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 						<span className="text-sm">FEATURED PROJECT</span>
 						<h1 className="text-2xl font-semibold text-blue-neo">{project.fields.title}</h1>
 						<p className="mt-2">{project.fields.shortDescription}</p>
 						<ul className="flex space-x-3 mt-4">
 							{project.fields.type.map((item) => (
-								<li key={"key-" + item}>
+								<li key={'key-' + item}>
 									<p className="text-sm text-gray-dark bg-gray-light py-1 px-2 rounded-md">{item}</p>
 								</li>
 							))}
 						</ul>
 						<div className="mt-5">
-							<Link href={"/projects/" + project.fields.slug}>
+							<Link href={'/projects/' + project.fields.slug}>
 								<a className="text-xl text-blue-neo hover:underline">Visit project →</a>
 							</Link>
 						</div>

@@ -43,7 +43,7 @@ export default function projects({ projects }) {
 					<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 						<span className="text-sm">FEATURED PROJECT</span>
 						<h1 className="text-2xl font-semibold text-blue-neo">{featuredProject.fields.title}</h1>
-						<p className="mt-2">{featuredProject.fields.shortDescription}</p>
+						<p className="mt-2">{featuredProject.fields.shortDescription.slice(0, 100) + "..."}</p>
 						<ul className="flex space-x-3 mt-4">
 							{featuredProject.fields.type.map((type) => (
 								<li key={"key" + type}>

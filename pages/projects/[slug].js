@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import client from "../../contentful/client";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
+import client from '../../contentful/client';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 
 const RICHTEXT_OPTIONS = {
 	renderNode: {
@@ -18,7 +18,7 @@ const RICHTEXT_OPTIONS = {
 			return (
 				<ul className="list_items mt-4">
 					{node.content.map((item, index) => (
-						<li key={"key" + index}>
+						<li key={'key' + index}>
 							<p>
 								<a href={item.content[0].content[1].data.uri} target="_blank" className="text-blue-neo hover:underline">
 									{item.content[0].content[1].content[0].value}
@@ -50,7 +50,7 @@ const RICHTEXT_OPTIONS = {
 
 export async function getStaticPaths() {
 	const res = await client.getEntries({
-		content_type: "project",
+		content_type: 'project',
 	});
 
 	const paths = res.items.map((item) => ({
@@ -67,8 +67,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const res = await client.getEntries({
-		content_type: "project",
-		"fields.slug": params.slug,
+		content_type: 'project',
+		'fields.slug': params.slug,
 	});
 
 	return {
@@ -92,14 +92,14 @@ export default function project({ project }) {
 			</Head>
 
 			<div className="project_detail w-4/5 md:w-3/5 mx-auto rounded-md overflow-hidden">
-				<Image src={"https:" + project.fields.featuredImage.fields.file.url} width={project.fields.featuredImage.fields.file.details.image.width} height={project.fields.featuredImage.fields.file.details.image.height} />
+				<Image src={'https:' + project.fields.featuredImage.fields.file.url} width={project.fields.featuredImage.fields.file.details.image.width} height={project.fields.featuredImage.fields.file.details.image.height} />
 				<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 					<span className="text-sm">FEATURED PROJECT</span>
 					<h1 className="text-2xl font-semibold text-blue-neo">{title}</h1>
-					<p className="mt-2">{shortDescription}</p>
-					<ul className="flex space-x-3 mt-4">
+					{/* <p className="mt-2">{shortDescription}</p> */}
+					<ul className="flex flex-wrap lg:space-x-3 mt-4">
 						{type.map((type) => (
-							<li key={"key" + type}>
+							<li key={'key' + type} className="mb-2 lg:mb-0 mr-2 lg:mr-0">
 								<p className="text-sm text-gray-dark bg-gray-light py-1 px-2 rounded-md">{type}</p>
 							</li>
 						))}

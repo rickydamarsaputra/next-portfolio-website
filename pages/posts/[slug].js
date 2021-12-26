@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
 
-import moment from "moment";
-import "moment/locale/id";
+import moment from 'moment';
+import 'moment/locale/id';
 
-import client from "../../contentful/client";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
+import client from '../../contentful/client';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import syntaxStyle from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import syntaxStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark';
 
 const RICHTEXT_OPTIONS = {
 	renderNode: {
@@ -31,11 +31,11 @@ const RICHTEXT_OPTIONS = {
 	},
 };
 
-const formatDate = (date) => moment(date).locale("id").format("D MMMM y");
+const formatDate = (date) => moment(date).locale('id').format('D MMMM y');
 
 export async function getStaticPaths() {
 	const res = await client.getEntries({
-		content_type: "post",
+		content_type: 'post',
 	});
 
 	const paths = res.items.map((item) => ({
@@ -52,8 +52,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const res = await client.getEntries({
-		content_type: "post",
-		"fields.slug": params.slug,
+		content_type: 'post',
+		'fields.slug': params.slug,
 	});
 
 	return {
@@ -77,7 +77,7 @@ export default function post({ post }) {
 			</Head>
 
 			<div className="w-4/5 md:w-3/5 mx-auto opacity-80">
-				<Image src={"https:" + featuredImage.fields.file.url} alt={featuredImage.fields.title} width={featuredImage.fields.file.details.image.width} height={featuredImage.fields.file.details.image.height} />
+				<Image src={'https:' + featuredImage.fields.file.url} alt={featuredImage.fields.title} width={featuredImage.fields.file.details.image.width} height={featuredImage.fields.file.details.image.height} />
 			</div>
 			<div className="w-4/5 md:w-1/2 mx-auto mt-5">
 				<h2>{formatDate(post.sys.createdAt)} / ARTICLE</h2>

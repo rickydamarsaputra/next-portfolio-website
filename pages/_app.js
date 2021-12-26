@@ -1,17 +1,21 @@
-import "../styles/tailwind.css";
+import '../styles/tailwind.css';
 
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Head from 'next/head';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {
-		document.documentElement.lang = "en";
+		document.documentElement.lang = 'en';
 	}, []);
 
 	return (
 		<>
+			<Head>
+				<meta name="robots" content="all" />
+			</Head>
 			<Header />
 			<Component {...pageProps} />
 			<Footer />

@@ -1,5 +1,5 @@
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default function about() {
 	return (
@@ -15,29 +15,28 @@ export default function about() {
 			<section>
 				<h2 className="text-xl font-light">Hey, call me Ricky! I'm a web developer.</h2>
 				<p className="mt-5">
-					Saya seorang web developer otodidak yang berbasis di Surabaya, Indonesia. Saya seorang <span className="font-bold">junior web developer</span>, bertanggung jawab dengan pekerjaan mereka selama jam kerja. Saya sedang menembuh kuliah disalah satu universitas di surabaya, yaitu universitas{" "}
+					I am a self-taught web developer based in Surabaya, Indonesia. I am a <span className="font-bold">junior web developer</span>, responsible with their work during working hours. I am currently studying at one of the universities in Surabaya, namely the university{' '}
 					<a href="https://www.dinamika.ac.id" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 						Dinamika
-					</a>{" "}
-					. Saya memiliki pengalaman dan prestasi beberapa tahun di bidang yang saya geluti.
+					</a>
+					. I have several years of experience and achievements in my field.
 				</p>
 				<p className="mt-4">
-					Saya suka pemrograman web, terutama di frontend, saya suka mencari tahu dan mempelajari teknologi baru tentang frontend yang ada seperti React dan Nextjs, saya biasanya mempelajarinya melalui video tutorial di YouTube, saya sangat suka itu, dan saya memiliki beberapa rekomendasi channel
-					YouTube , Saya merekomendasikan <br />
+					I love web programming, especially on the frontend, I like to find out and learn new technologies about existing frontends like React and Nextjs, I usually learn it through video tutorials on YouTube, I really like it, and I have some YouTube channel recommendations, I recommend {''}
 					<a href="https://www.youtube.com/channel/UCkXmLjEr95LVtGuIm3l2dPg" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 						web programming unpas
 					</a>
-					,{" "}
+					,{' '}
 					<a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 						traversy media
 					</a>
-					, and{" "}
+					, and{' '}
 					<a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 						the net ninja 🐱‍👤.
 					</a>
 				</p>
-				<p className="mt-4">Di luar pemrograman, saya juga membaca manga dan nonton anime 😁 kemudian menonton video pemrograman di youtube.</p>
-				<p className="mt-4">Ketika saya tidak lagi melakukan salah satu dari hal-hal yang disebutkan di atas, maka sesuatu yang sangat buruk pasti telah terjadi pada saya 😭.</p>
+				<p className="mt-4">Outside of programming, I also read manga and watch anime 😁 then watch programming videos on youtube.</p>
+				<p className="mt-4">When I no longer do any of the things mentioned above, then something very bad must have happened to me 😭.</p>
 			</section>
 			{/* about profile */}
 

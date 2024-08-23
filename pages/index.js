@@ -39,9 +39,9 @@ export default function home({ posts, project, repos }) {
 			{/* hero section */}
 			<section>
 				<h1 className="text-3xl capitalize font-bold text-blue-neo">ricky damar saputra</h1>
-				<h2 className="text-xl mt-2">Web developer based in Surabaya, Indonesia.</h2>
-				<p className="mt-10">
-					<span className="font-bold text-white">Hello, I'm Ricky!</span> I am a self-taught web developer based in Surabaya, Indonesia. I aim to blur the line between high-performance engineering and good design.
+				<h2 className="text-xl mt-2">Web developer based in Sidoarjo, Indonesia.</h2>
+				<p className="text-justify mt-10">
+					Hello and welcome to my portfolio! <span className="font-bold text-blue-neo">I’m Ricky</span>, a web developer based in Sidoarjo, passionate about creating innovative and functional digital solutions. With expertise in responsive design, web application development, and performance optimization, I’m here to help bring your vision to life. Explore my work here, and let’s collaborate to create engaging and effective online experiences for your users. Thank you for visiting my site I look forward to the opportunity to work with you!
 				</p>
 			</section>
 			{/* hero section */}

@@ -67,7 +67,7 @@ export default function contact() {
 					</li>
 					<li>
 						<p>
-							<a href="https://www.linkedin.com/in/ricky-damar-saputra-179b42230/" rel="noreferrer" target="_blank" className="text-blue-neo font-semibold hover:underline">
+							<a href="https://www.linkedin.com/in/ricky-damar-saputra" rel="noreferrer" target="_blank" className="text-blue-neo font-semibold hover:underline">
 								Linkedin
 							</a>{' '}
 							– Maybe i can get some job offer in the field i can on linkedin.

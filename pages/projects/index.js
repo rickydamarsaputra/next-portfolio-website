@@ -34,25 +34,28 @@ export default function projects({ projects }) {
 			{/* project featured */}
 			<section>
 				<div className="featured_project mt-10 rounded-md overflow-hidden">
-					<Image
-						src={"https:" + featuredProject.fields.featuredImage.fields.file.url}
-						alt={featuredProject.fields.featuredImage.fields.title}
-						width={featuredProject.fields.featuredImage.fields.file.details.image.width}
-						height={featuredProject.fields.featuredImage.fields.file.details.image.height}
-					/>
+					{featuredProject?.fields ? (
+						<Image
+							src={"https:" + featuredProject?.fields.featuredImage.fields.file.url}
+							alt={featuredProject?.fields.featuredImage.fields.title}
+							width={featuredProject?.fields.featuredImage.fields.file.details.image.width}
+							height={featuredProject?.fields.featuredImage.fields.file.details.image.height}
+						/>
+					) : null}
+
 					<div className="bg-gradient-to-tr from-blue-dark to-blue-light p-4">
 						<span className="text-sm">FEATURED PROJECT</span>
-						<h1 className="text-2xl font-semibold text-blue-neo">{featuredProject.fields.title}</h1>
-						<p className="mt-2">{featuredProject.fields.shortDescription.slice(0, 100) + "..."}</p>
+						<h1 className="text-2xl font-semibold text-blue-neo">{featuredProject?.fields.title}</h1>
+						<p className="mt-2">{featuredProject?.fields.shortDescription.slice(0, 100) + "..."}</p>
 						<ul className="flex space-x-3 mt-4">
-							{featuredProject.fields.type.map((type) => (
+							{featuredProject?.fields.type.map((type) => (
 								<li key={"key" + type}>
 									<p className="text-sm text-gray-dark bg-gray-light py-1 px-2 rounded-md">{type}</p>
 								</li>
 							))}
 						</ul>
 						<div className="mt-5">
-							<Link href={"/projects/" + featuredProject.fields.slug}>
+							<Link href={"/projects/" + featuredProject?.fields.slug}>
 								<a className="text-xl text-blue-neo hover:underline">Visit project →</a>
 							</Link>
 						</div>

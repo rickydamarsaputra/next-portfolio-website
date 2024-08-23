@@ -14,29 +14,13 @@ export default function about() {
 			{/* about profile */}
 			<section>
 				<h2 className="text-xl font-light">Hey, call me Ricky! I'm a web developer.</h2>
-				<p className="mt-5">
-					I am a self-taught web developer based in Surabaya, Indonesia. I am a <span className="font-bold">junior web developer</span>, responsible with their work during working hours. I am currently studying at one of the universities in Surabaya, namely the university{' '}
-					<a href="https://www.dinamika.ac.id" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
-						Dinamika
-					</a>
-					. I have several years of experience and achievements in my field.
+				<p className="text-justify mt-5">
+					Hello! I’m Ricky Damar Saputra, a Web Developer passionate about creating captivating digital experiences.
+					With experience in building various types of websites and applications, I blend creativity with technical expertise to deliver effective and aesthetically pleasing solutions. I'm always excited to collaborate on challenging projects where I can apply my skills in coding, responsive design, and performance optimization.
 				</p>
-				<p className="mt-4">
-					I love web programming, especially on the frontend, I like to find out and learn new technologies about existing frontends like React and Nextjs, I usually learn it through video tutorials on YouTube, I really like it, and I have some YouTube channel recommendations, I recommend {''}
-					<a href="https://www.youtube.com/channel/UCkXmLjEr95LVtGuIm3l2dPg" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
-						web programming unpas
-					</a>
-					,{' '}
-					<a href="https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
-						traversy media
-					</a>
-					, and{' '}
-					<a href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
-						the net ninja 🐱‍👤.
-					</a>
+				<p className="text-justify mt-4">
+					Are you looking for someone to bring your digital vision to life? Let’s work together and create something extraordinary!
 				</p>
-				<p className="mt-4">Outside of programming, I also read manga and watch anime 😁 then watch programming videos on youtube.</p>
-				<p className="mt-4">When I no longer do any of the things mentioned above, then something very bad must have happened to me 😭.</p>
 			</section>
 			{/* about profile */}
 

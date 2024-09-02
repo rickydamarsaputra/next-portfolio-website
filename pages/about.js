@@ -82,7 +82,7 @@ export default function about() {
 			{/* curriculum vitae */}
 			<section>
 				<h1 className="text-3xl font-semibold mb-4">Curriculum Vitae</h1>
-				<a href="https://www.cakeresume.com/ricky-damar-saputra" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
+				<a href="https://l1nk.dev/cv-en-ats-ricky-damar-saputra" rel="noreferrer" target="_blank" className="text-blue-neo hover:underline">
 					Let's see!
 				</a>
 			</section>

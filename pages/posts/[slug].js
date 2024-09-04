@@ -13,6 +13,12 @@ import syntaxStyle from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-
 
 const RICHTEXT_OPTIONS = {
 	renderNode: {
+		[BLOCKS.HEADING_1]: (node, children) => {
+			return <h1 className="text-2xl font-semibold text-white-darkest mb-3">{children}</h1>;
+		},
+		[BLOCKS.HEADING_4]: (node, children) => {
+			return <h4 className="text-xl font-semibold text-white-darkest mb-3">{children}</h4>;
+		},
 		[BLOCKS.PARAGRAPH]: (node, children) => {
 			return <p className="text-white-darkest mb-3">{children}</p>;
 		},
